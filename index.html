@@ -1,0 +1,263 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario MCS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>MÓDULO CONECTANDO SALUD, LA TINTA, A.V.</h1>
+    <form id="mcsForm">
+      <!-- ¿Se permite la grabación de la llamada? -->
+      <div class="form-group">
+        <label>¿Se permite la grabación de la llamada?</label>
+        <label><input type="radio" name="grabacion_llamada" value="si" required> Sí</label>
+        <label><input type="radio" name="grabacion_llamada" value="no" required> No</label>
+      </div>
+
+      <!-- Turnista -->
+      <div class="form-group">
+        <label for="turnista">Turnista</label>
+        <select id="turnista" name="turnista" required>
+          <option value="">Seleccione...</option>
+          <option value="alba_yanneth">Alba Yanneth</option>
+          <option value="veronica">Verónica</option>
+        </select>
+      </div>
+
+      <!-- Fecha y Hora -->
+      <div class="form-group">
+        <label for="fecha">Fecha</label>
+        <input type="date" id="fecha" name="fecha" required>
+      </div>
+      <div class="form-group">
+        <label for="hora">Hora</label>
+        <input type="time" id="hora" name="hora" required>
+      </div>
+
+      <!-- Medio y Tipo de Comunicación -->
+      <div class="form-group">
+        <label for="medio_comunicacion">Medio de Comunicación</label>
+        <select id="medio_comunicacion" name="medio_comunicacion" required>
+          <option value="">Seleccione...</option>
+          <option value="llamada">Llamada</option>
+          <option value="mensaje">Mensaje</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="tipo_comunicacion">Tipo de Comunicación</label>
+        <select id="tipo_comunicacion" name="tipo_comunicacion" required>
+          <option value="">Seleccione...</option>
+          <option value="entrante">Entrante</option>
+          <option value="saliente">Saliente</option>
+        </select>
+      </div>
+
+      <!-- Número de Teléfono -->
+      <div class="form-group">
+        <label for="numero_telefono">No. Teléfono</label>
+        <input type="tel" id="numero_telefono" name="numero_telefono" pattern="\d{8}" maxlength="8" required placeholder="8 dígitos">
+      </div>
+
+      <!-- Responsable -->
+      <div class="form-group">
+        <label for="responsable">Nombre/Apellido del AE o ATT responsable del seguimiento</label>
+        <input type="text" id="responsable" name="responsable" required>
+      </div>
+
+      <!-- Cargo -->
+      <div class="form-group">
+        <label for="cargo">Cargo</label>
+        <select id="cargo" name="cargo" required>
+          <option value="">Seleccione...</option>
+          <option value="ae">AE</option>
+          <option value="att">ATT</option>
+          <option value="tsr">TSR</option>
+          <option value="familiar">Familiar</option>
+          <option value="paciente">Paciente</option>
+          <option value="comadrona">Comadrona</option>
+          <option value="partero">Partero</option>
+          <option value="medico">Médico</option>
+          <option value="enfermero_de_distrito">Enfermero de Distrito</option>
+          <option value="coordinador_de_distrito">Coordinador de Distrito</option>
+          <option value="encargado_de_emergencias">Encargado de Emergencias</option>
+          <option value="bombero">Bombero</option>
+          <option value="cocode">COCODE</option>
+          <option value="ep_dms">EP DMS</option>
+        </select>
+      </div>
+
+      <!-- Tipo de Consulta -->
+      <div class="form-group">
+        <label for="tipo_consulta">Tipo de Consulta</label>
+        <select id="tipo_consulta" name="tipo_consulta" required>
+          <option value="">Seleccione...</option>
+          <option value="teleconsulta">Teleconsulta</option>
+          <option value="contrareferencia">Contrarreferencia</option>
+          <option value="teleorientacion">Teleorientación</option>
+          <option value="vigilancia_epidemiologica">Vigilancia Epidemiológica</option>
+          <option value="presentacion_caso">Presentación de Caso</option>
+          <option value="informacion_clinica">Información Clínica</option>
+          <option value="teleinterconsulta">Teleinterconsulta</option>
+        </select>
+      </div>
+
+      <!-- Según la Consulta -->
+      <div class="form-group">
+        <label for="segun_consulta">Según la Consulta</label>
+        <select id="segun_consulta" name="segun_consulta" required>
+          <option value="">Seleccione...</option>
+          <option value="emergencia">Emergencia</option>
+          <option value="morbilidad">Morbilidad</option>
+          <option value="no_aplica">No Aplica</option>
+        </select>
+      </div>
+
+      <!-- Grupo -->
+      <div class="form-group">
+        <label for="grupo">Grupo</label>
+        <select id="grupo" name="grupo" required>
+          <option value="">Seleccione...</option>
+          <option value="obstetrico">Obstétrico</option>
+          <option value="pediatrico">Pediátrico</option>
+          <option value="traumatologia">Traumatología</option>
+          <option value="medicina_general">Medicina General</option>
+          <option value="cirugia">Cirugía</option>
+          <option value="no_especifica">No Especifica</option>
+        </select>
+      </div>
+
+      <!-- Datos del Paciente -->
+      <div class="form-group">
+        <label for="nombre_paciente">Nombre del Paciente</label>
+        <input type="text" id="nombre_paciente" name="nombre_paciente" required>
+      </div>
+      <div class="form-group">
+        <label for="cui">CUI</label>
+        <input type="text" id="cui" name="cui" pattern="\d{13}" maxlength="13" required placeholder="13 dígitos">
+      </div>
+      <div class="form-group">
+        <label for="genero">Género</label>
+        <input type="text" id="genero" name="genero" required>
+      </div>
+      <div class="form-group">
+        <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+      </div>
+      <div class="form-group">
+        <label for="edad">Edad</label>
+        <input type="number" id="edad" name="edad" required min="0">
+      </div>
+
+      <!-- Ubicación -->
+      <div class="form-group">
+        <label for="distrito">Distrito</label>
+        <select id="distrito" name="distrito" required>
+          <option value="">Seleccione...</option>
+          <option value="senahu">Senahú</option>
+          <option value="santa_catalina_la_tinta">Santa Catalina La Tinta</option>
+          <option value="panzos">Panzós</option>
+          <option value="tucuru">Tucurú</option>
+          <option value="teleman">Telemán</option>
+          <option value="cahabon">Cahabón</option>
+          <option value="el_estor">El Estor</option>
+          <option value="san_pedro_charcha">San Pedro Carchá</option>
+          <option value="purulha">Purulhá</option>
+          <option value="tamahú">Tamahú</option>
+          <option value="san_juan_chamelco">San Juan Chamelco</option>
+          <option value="coban">Cobán</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="comunidad">Comunidad</label>
+        <input type="text" id="comunidad" name="comunidad" required>
+      </div>
+
+      <!-- Situación Clínica -->
+      <div class="form-group">
+        <label for="situacion_clinica">Situación Clínica</label>
+        <input type="text" id="situacion_clinica" name="situacion_clinica" required>
+      </div>
+      <div class="form-group">
+        <label>Señales de peligro</label>
+        <label><input type="radio" name="senales_peligro" value="si" required> Sí</label>
+        <label><input type="radio" name="senales_peligro" value="no" required> No</label>
+      </div>
+
+      <!-- Desenlace y Referencia -->
+      <div class="form-group">
+        <label for="desenlace_consulta">Desenlace de la Consulta</label>
+        <select id="desenlace_consulta" name="desenlace_consulta" required>
+          <option value="">Seleccione...</option>
+          <option value="teleorientacion">Teleorientación</option>
+          <option value="referencia">Referencia</option>
+          <option value="medico_no_acepto">Médico No aceptó la referencia</option>
+          <option value="interconsulta">Interconsulta</option>
+          <option value="derivado_esalud">Derivado a eSalud</option>
+          <option value="contrarreferencia">Contrarreferencia</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="nivel_referido">Nivel al que fue Referido</label>
+        <select id="nivel_referido" name="nivel_referido" required>
+          <option value="">Seleccione...</option>
+          <option value="primer_nivel">1er nivel</option>
+          <option value="segundo_nivel">2do nivel</option>
+          <option value="tercer_nivel">3er nivel</option>
+        </select>
+      </div>
+
+      <!-- Registro en Kawok y URL -->
+      <div class="form-group">
+        <label>Se encuentra registrado en Kawok</label>
+        <label><input type="radio" name="registrado_kawok" value="si" required> Sí</label>
+        <label><input type="radio" name="registrado_kawok" value="no" required> No</label>
+      </div>
+      <div class="form-group">
+        <label for="url">URL</label>
+        <input type="url" id="url" name="url" required placeholder="https://">
+      </div>
+
+      <!-- Indicaciones e Información MCS -->
+      <div class="form-group">
+        <label for="indicaciones">Indicaciones Brindadas</label>
+        <textarea id="indicaciones" name="indicaciones" rows="3" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="medio_mcs">Medio por el que se enteró del MCS</label>
+        <input type="text" id="medio_mcs" name="medio_mcs" required>
+      </div>
+
+      <button type="submit">Enviar</button>
+      <button type="button" id="showRecordsBtn">Mostrar registros</button>
+      <button type="button" id="showStatsBtn">Mostrar estadísticas</button>
+    </form>
+
+    <!-- Sección para registros -->
+    <div id="recordsSection" class="hidden">
+      <h2>Registros</h2>
+      <table id="recordsTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Tipo de Consulta</th>
+            <th>Fecha</th>
+            <th>Turnista</th>
+            <th>Paciente</th>
+            <!-- puedes agregar más columnas según necesites -->
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- Sección para estadísticas -->
+    <div id="statsSection" class="hidden">
+      <h2>Estadísticas</h2>
+      <ul id="statsList"></ul>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
